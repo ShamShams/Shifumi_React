@@ -1,0 +1,23 @@
+.App {
+  text-align: center;
+  font-family: 'Mirza', sans-serif;
+}
+
+.App-header h2 {
+  font-family: 'Satisfy', cursive;
+  color: #00649c;
+  font-size: 50px;
+}
+
+p {
+  font-size: 30px;
+}
+
+.fa {
+  margin: 10px 40px;
+  cursor: pointer;
+}
+
+.fa:hover {
+  color: #00649c;
+}
