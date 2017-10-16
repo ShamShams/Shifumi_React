@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './stylesheets/App.css';
-import Icons from './components/Icons';
+import Icon from './components/Icon';
 
 class App extends Component {
   constructor() {
@@ -28,7 +28,9 @@ class App extends Component {
           <h2>Shifumi</h2>
         </div>
         <p>{this.state.userChoiceText}</p>
-        <Icons />
+        <Icon className="fa fa-hand-rock-o fa-4x" />
+        <Icon className="fa fa-hand-paper-o fa-4x" />
+        <Icon className="fa fa-hand-scissors-o fa-4x" />
         <p>L'ordinateur a choisi : {this.getComputerChoice()}</p>
       </div>
     );

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class Feuille extends Component {
+class Icon extends Component {
   constructor() {
     super();
     this.state = {
@@ -16,9 +16,9 @@ class Feuille extends Component {
 
   render() {
     return (
-      <i className="fa fa-hand-paper-o fa-4x" onClick={this.changeColor.bind(this)} style={{color:this.state.color}}></i>
+      <i className={this.props.className} onClick={this.changeColor.bind(this)} style={{color:this.state.color}}></i>
     )
   }
 }
 
-export default Feuille;
+export default Icon;
