@@ -3,21 +3,29 @@
   font-family: 'Mirza', sans-serif;
 }
 
-.App-header h2 {
-  font-family: 'Satisfy', cursive;
+h1 {
+  font-size: 40px;
+  margin-top: 20px;
+  margin-bottom: 50px;
   color: #00649c;
-  font-size: 50px;
+  font-family: 'Satisfy', cursive;
+}
+
+h2 {
+  font-family: 'Satisfy', cursive;
 }
 
 p {
-  font-size: 30px;
+  font-size: 27px;
+  color: #00649c;
 }
 
 .fa {
-  margin: 10px 40px;
+  margin: 0 30px;
+  margin-bottom: 30px;
   cursor: pointer;
 }
 
-.fa:hover {
+.active {
   color: #00649c;
 }
