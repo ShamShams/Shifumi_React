@@ -3,21 +3,39 @@
   font-family: 'Mirza', sans-serif;
 }
 
-h1 {
+.App-header {
+  margin-bottom: 40px;
+}
+
+.title {
   font-size: 40px;
   margin-top: 20px;
-  margin-bottom: 50px;
   color: #00649c;
   font-family: 'Satisfy', cursive;
+  margin-bottom: 5px;
+}
+
+.text-intro {
+  margin-top: 10px;
+  padding-top: 3px;
+  font-size: 20px;
+  font-family: 'Satisfy', cursive;
+  color: #4694c1;
 }
 
 h2 {
   font-family: 'Satisfy', cursive;
 }
 
+h2 span {
+  font-family: monospace;
+  font-size: 22px;
+}
+
 p {
   font-size: 27px;
   color: #00649c;
+  margin-top: 10px;
 }
 
 .fa {
@@ -26,6 +44,21 @@ p {
   cursor: pointer;
 }
 
+.fa-repeat {
+  color: #fff;
+  background-color: #00649c;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.no-cursor {
+  cursor: not-allowed;
+}
+
 .active {
   color: #00649c;
+}
+
+.hidden {
+  display: none;
 }
