@@ -24,7 +24,7 @@ class App extends Component {
 
     if (this.state.gameIsOver) {
       this.setState({
-        text: "Click on replay to start a new game",
+        text: "Click on Replay to start a new game",
         computerChoice: ""
       })
     } else if (
@@ -41,7 +41,7 @@ class App extends Component {
         this.setState({
           userScore: "Winner",
           gameIsOver: true,
-          text: "Congratulation ! You win the game !"
+          text: "Congratulations ! You win the game !"
         })
       }
     } else if (

@@ -5,4 +5,11 @@ body {
   background-image: url(../images/RPS-edit.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: #3266CC;
+}
+
+@media screen and (max-width: 1000px) {
+  body {
+    background-image: none;
+  }
 }
