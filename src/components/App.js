@@ -6,10 +6,11 @@ class App extends Component {
     super();
     this.state = {
       userChoice: "",
-      userScore: 0,
       computerChoice: "",
+      userScore: 0,
       computerScore: 0,
-      resultText: "",
+      text: "Can you beat the computer ? Be the first to reach 10 points...",
+      gameIsOver: false
     };
   }
 
@@ -21,7 +22,12 @@ class App extends Component {
       computerChoice: computer
     });
 
-    if (
+    if (this.state.gameIsOver) {
+      this.setState({
+        text: "Click on replay to start a new game",
+        computerChoice: ""
+      })
+    } else if (
       (user === "rock" && computer === "scissors") ||
       (user === "scissors" && computer === "paper") ||
       (user === "paper" && computer === "rock")
@@ -29,13 +35,13 @@ class App extends Component {
       if (this.state.userScore < 9) {
         this.setState({
           userScore: this.state.userScore + 1,
-          resultText: "You wiiiin ! Champion !"
+          text: "You wiiin ! Youhouu !"
         })
       } else {
         this.setState({
           userScore: "Winner",
-          computerScore: 0,
-          resultText: "Congratulation ! You win the game !"
+          gameIsOver: true,
+          text: "Congratulation ! You win the game ! Let's do this again"
         })
       }
     } else if (
@@ -46,33 +52,36 @@ class App extends Component {
       if (this.state.computerScore < 9) {
         this.setState({
           computerScore: this.state.computerScore + 1,
-          resultText: "You loooose... looser !"
+          text: "Oh oh, computer wins..."
         })
       } else {
         this.setState({
           computerScore: "Winner",
-          userScore: 0,
-          resultText: "You loose the game :( Try again..."
+          gameIsOver: true,
+          text: "You looooose... Try again"
         })
       }
     } else {
       this.setState({
-        resultText: "It's a tie !"
+        text: "It's a tie !"
       })
     }
   }
 
   replay = () => {
     this.setState({
+      userChoice: "",
+      computerChoice: "",
       userScore: 0,
       computerScore: 0,
-      resultText: ""
+      text: "Can you beat the computer ? Be the first to reach 10 points...",
+      gameIsOver: false
     })
   }
 
   render() {
+    // Ajouter la class "active" pour que la main devienne bleue lorsque le joueur la sélectionne
     let rock_active_u, paper_active_u, scissors_active_u, rock_active_c, paper_active_c, scissors_active_c;
-
     this.state.userChoice === "rock"? rock_active_u = " active" : "";
     this.state.userChoice === "paper"? paper_active_u = " active" : "";
     this.state.userChoice === "scissors"? scissors_active_u = " active" : "";
@@ -84,7 +93,7 @@ class App extends Component {
       <div className="App">
         <div className="App-header">
           <h1 className="title">Shifumi</h1>
-          <p className="text-intro">Can you beat the computer ? Choose rock, paper or scissors and try to reach 10 points...</p>
+          <p className="sub-title">Rock Paper Scissors Game</p>
         </div>
         <h2>You - <span>{this.state.userScore}</span></h2>
         <i className={`fa fa-hand-rock-o fa-4x ${rock_active_u}`} name="rock" onClick={this.compare}></i>
@@ -94,8 +103,8 @@ class App extends Component {
         <i className={`no-cursor fa fa-hand-rock-o fa-4x ${rock_active_c}`} />
         <i className={`no-cursor fa fa-hand-paper-o fa-4x ${paper_active_c}`} />
         <i className={`no-cursor fa fa-hand-scissors-o fa-4x ${scissors_active_c}`} />
-        <p>{this.state.resultText}</p>
-        <i className="fa fa-repeat fa-2x" onClick={this.replay}></i>
+        <p>{this.state.text}</p>
+        <h2 className="replay" onClick={this.replay}><i className="fa fa-repeat fa-2x"></i>Replay</h2>
       </div>
     );
   }
