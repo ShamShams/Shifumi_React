@@ -41,7 +41,7 @@ class App extends Component {
         this.setState({
           userScore: "Winner",
           gameIsOver: true,
-          text: "Congratulation ! You win the game ! Let's do this again"
+          text: "Congratulation ! You win the game !"
         })
       }
     } else if (
@@ -82,12 +82,12 @@ class App extends Component {
   render() {
     // Ajouter la class "active" pour que la main devienne bleue lorsque le joueur la sélectionne
     let rock_active_u, paper_active_u, scissors_active_u, rock_active_c, paper_active_c, scissors_active_c;
-    this.state.userChoice === "rock"? rock_active_u = " active" : "";
-    this.state.userChoice === "paper"? paper_active_u = " active" : "";
-    this.state.userChoice === "scissors"? scissors_active_u = " active" : "";
-    this.state.computerChoice === "rock"? rock_active_c = " active" : "";
-    this.state.computerChoice === "paper"? paper_active_c = " active" : "";
-    this.state.computerChoice === "scissors"? scissors_active_c = " active" : "";
+    this.state.userChoice === "rock"? rock_active_u = " active" : " ";
+    this.state.userChoice === "paper"? paper_active_u = " active" : " ";
+    this.state.userChoice === "scissors"? scissors_active_u = " active" : " ";
+    this.state.computerChoice === "rock"? rock_active_c = " active" : " ";
+    this.state.computerChoice === "paper"? paper_active_c = " active" : " ";
+    this.state.computerChoice === "scissors"? scissors_active_c = " active" : " ";
 
     return (
       <div className="App">
