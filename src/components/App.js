@@ -9,7 +9,7 @@ class App extends Component {
       computerChoice: "",
       userScore: 0,
       computerScore: 0,
-      text: "Can you beat the computer ? Be the first to reach 10 points...",
+      text: "Be the first to reach 10 points...",
       gameIsOver: false
     };
   }
@@ -74,7 +74,7 @@ class App extends Component {
       computerChoice: "",
       userScore: 0,
       computerScore: 0,
-      text: "Can you beat the computer ? Be the first to reach 10 points...",
+      text: "Be the first to reach 10 points...",
       gameIsOver: false
     })
   }
@@ -95,15 +95,17 @@ class App extends Component {
           <h1 className="title">Shifumi</h1>
           <p className="sub-title">Rock Paper Scissors Game</p>
         </div>
-        <h2>You - <span>{this.state.userScore}</span></h2>
-        <i className={`fa fa-hand-rock-o fa-4x ${rock_active_u}`} name="rock" onClick={this.compare}></i>
-        <i className={`fa fa-hand-paper-o fa-4x ${paper_active_u}`} name="paper" onClick={this.compare}></i>
-        <i className={`fa fa-hand-scissors-o fa-4x ${scissors_active_u}`} name="scissors" onClick={this.compare}></i>
-        <h2>Computer - <span>{this.state.computerScore}</span></h2>
-        <i className={`no-cursor fa fa-hand-rock-o fa-4x ${rock_active_c}`} />
-        <i className={`no-cursor fa fa-hand-paper-o fa-4x ${paper_active_c}`} />
-        <i className={`no-cursor fa fa-hand-scissors-o fa-4x ${scissors_active_c}`} />
-        <p>{this.state.text}</p>
+        <div className="playground">
+          <h2>You - <span>{this.state.userScore}</span></h2>
+          <i className={`fa fa-hand-rock-o fa-4x ${rock_active_u}`} name="rock" onClick={this.compare}></i>
+          <i className={`fa fa-hand-paper-o fa-4x ${paper_active_u}`} name="paper" onClick={this.compare}></i>
+          <i className={`fa fa-hand-scissors-o fa-4x ${scissors_active_u}`} name="scissors" onClick={this.compare}></i>
+          <h2>Computer - <span>{this.state.computerScore}</span></h2>
+          <i className={`no-cursor fa fa-hand-rock-o fa-4x ${rock_active_c}`} />
+          <i className={`no-cursor fa fa-hand-paper-o fa-4x ${paper_active_c}`} />
+          <i className={`no-cursor fa fa-hand-scissors-o fa-4x ${scissors_active_c}`} />
+          <p>{this.state.text}</p>
+        </div>
         <h2 className="replay" onClick={this.replay}><i className="fa fa-repeat fa-2x"></i>Replay</h2>
       </div>
     );
