@@ -2,16 +2,13 @@ import React, { Component } from 'react';
 import '../stylesheets/App.css';
 
 class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      userChoice: "",
-      computerChoice: "",
-      userScore: 0,
-      computerScore: 0,
-      text: "Be the first to reach 10 points...",
-      gameIsOver: false
-    };
+  state = {
+    userChoice: "",
+    computerChoice: "",
+    userScore: 0,
+    computerScore: 0,
+    text: "Be the first to reach 10 points...",
+    gameIsOver: false
   }
 
   compare = (e) => {
