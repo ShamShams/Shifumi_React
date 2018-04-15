@@ -24,7 +24,11 @@
 
 .playground {
   background-color: #edf4ff;
+<<<<<<< HEAD
   width: 460px;
+=======
+  width: 470px;
+>>>>>>> f9a19ebb97177779247fe0b4033e7e555598a017
   margin: auto;
   padding: 5px;
   border-radius: 20px;
@@ -81,5 +85,34 @@ p {
 }
 
 .active {
-    color: #265cc7;
+  color: #265cc7;
+}
+
+@media screen and (max-width: 490px) {
+  .playground {
+    width: 300px;
+  }
+
+  .fa {
+    font-size: 50px;
+    margin: 0 20px;
+  }
+
+  .fa-repeat {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 24px;
+    margin-top: 13px;
+  }
+
+  .title {
+    font-size: 35px;
+    margin-top: 15px;
+  }
+
+  h2 {
+    font-size: 21px;
+  }
 }
